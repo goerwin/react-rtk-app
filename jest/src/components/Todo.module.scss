@@ -1,0 +1,64 @@
+$colorGreen: #13ce66;
+$colorRed: #ff0000;
+$colorGray: #8492a6;
+
+.container {
+  position: relative;
+  min-height: 15rem;
+
+  h1 {
+    color: #273444;
+  }
+
+  button {
+    border-color: $colorGreen;
+    color: $colorGreen;
+    flex-shrink: 0;
+
+    &.isDanger {
+      color: $colorRed;
+      border-color: $colorRed;
+    }
+
+    &.isSecondary {
+      color: $colorGray;
+      border-color: $colorGray;
+    }
+  }
+}
+
+.formContainer {
+  margin-bottom: 1rem;
+
+  form {
+    display: flex;
+    margin-top: 1rem;
+
+    input {
+      border-radius: 0.25rem;
+      border: 1px solid #333;
+      padding: 0 1rem;
+      width: 100%;
+    }
+  }
+}
+
+.todosContainer {
+  list-style: none;
+
+  > li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    text-align: left;
+
+    > p {
+      width: 100%;
+
+      &.isCompleted {
+        text-decoration: line-through;
+        color: $colorGreen;
+      }
+    }
+  }
+}

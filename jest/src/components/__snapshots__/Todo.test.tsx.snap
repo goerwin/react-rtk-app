@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should show a loading state 1`] = `
+<DocumentFragment>
+  <main
+    class="container"
+  >
+    <div
+      aria-busy="true"
+      class="container"
+      data-testid="global-loading"
+      role="alert"
+    >
+      <div
+        class="spinner"
+      />
+    </div>
+    <div
+      class="formContainer"
+    >
+      <h1>
+        Todo (Asynchronous actions)
+      </h1>
+      <form>
+        <input
+          placeholder="Add Todo"
+          value=""
+        />
+        <button>
+          Add
+        </button>
+      </form>
+    </div>
+    <ul
+      class="todosContainer"
+    />
+  </main>
+</DocumentFragment>
+`;
