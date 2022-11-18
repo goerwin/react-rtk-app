@@ -34,10 +34,6 @@ export default function Todo() {
     await editTodo({ id: todo.id, todo: { ...todo, completed: !todo.completed } });
   };
 
-  const handleRemoveTodo = async (id: string) => {
-    await removeTodo(id);
-  };
-
   if (isError) {
     return (
       <main className={styles.container}>
@@ -78,7 +74,7 @@ export default function Todo() {
               {el.completed ? 'Not Done' : 'Done'}
             </button>
 
-            <button onClick={() => handleRemoveTodo(el.id)} className={styles.isDanger}>
+            <button onClick={() => removeTodo(el.id)} className={styles.isDanger}>
               Remove
             </button>
           </li>

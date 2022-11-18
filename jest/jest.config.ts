@@ -8,7 +8,7 @@ const config: Config = {
     '\\.(css|scss)$': 'identity-obj-proxy',
   },
 
-  coverageProvider: 'v8',
+  coverageProvider: 'babel',
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',
     '!src/mocks/**/*',
