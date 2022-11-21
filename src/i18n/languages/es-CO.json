@@ -1,0 +1,3 @@
+{
+  "welcomeMessage": "Hola, hoy es {ts, date, ::yyyyMMdd}"
+}

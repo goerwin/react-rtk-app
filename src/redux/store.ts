@@ -1,20 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
-import { apiSlice } from '../features/api/apiSlice';
+import i18nReducer from '../features/i18n/i18nSlice';
 
-export function createStore() {
-  return configureStore({
-    reducer: {
-      counter: counterReducer,
-      [apiSlice.reducerPath]: apiSlice.reducer,
-    },
-
-    // rtk-query needs to be added as last middleware
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(apiSlice.middleware),
-  });
-}
-
-export const store = createStore();
+export const store = configureStore({
+  reducer: {
+    i18n: i18nReducer,
+  },
+});
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof store.getState>;
